@@ -3,11 +3,17 @@ package org.komarov.classes;
 import lombok.Builder;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @Builder
-public class Review {
+public class Review implements Serializable {
 
-  private String text;
+    private static final long serialVersionUID = 1L;
 
-  private int score;
+    private Meal meal;
+
+    private String text;
+
+    private int score;
 }
